@@ -19,7 +19,20 @@ export default {
     },
     methods: {
         // Aquí puedes agregar métodos para manejar la lógica de conversión
-
+        convertirCelciusAFahrenheit() {
+            if (this.celcius !== '') {
+                this.fahrenheit = (this.celcius * 9/5) + 32;
+            } else {
+                this.fahrenheit = '';
+            }
+        },
+        convertirCelciusAKelvin() {
+            if (this.celcius !== '') {
+                this.kelvin = parseFloat(this.celcius) + 273.15;
+            } else {
+                this.kelvin = '';
+            }
+        }
     },
     computed: {
         // Aquí puedes agregar propiedades computadas si es necesario
